@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: product_cost_history
+    description: "SCD2 product cost history"
+    columns:
+      - name: sku
+        tests:
+          - not_null
+      - name: unit_cost_sar
+        tests:
+          - not_null
+
+  - name: weekly_margin
+    description: "Weekly margin by city and category"
+    columns:
+      - name: iso_week
+        tests:
+          - not_null
+      - name: city
+        tests:
+          - not_null
+      - name: category
+        tests:
+          - not_null
+      - name: revenue_sar
+        tests:
+          - not_null
+          
